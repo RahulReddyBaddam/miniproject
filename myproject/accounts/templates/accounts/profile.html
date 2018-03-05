@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<style media="screen">
+body
+{
+  background-color:rgb(153,153,102);
+}
+  legend
+{
+font-size:30px;
+  text-align: center;
+}
+  div.scr{
+    overflow: auto;
+    height:25rem;
+  }
+</style>
+<body>
+<div class="jumbotron text-center" style="background-color:transparent">
+      <legend>Profile</legend>
+          <h4>Name : {{user.get_full_name}}</li>
+          <h5>Description : {{user.userprofile.des}}</li>
+          <h5>Mobile : {{user.userprofile.phone}}</li>
+          <h5>Email : {{user.email}}</li>
+
+  </div>
+
+
+{% endblock %}
+</body>
